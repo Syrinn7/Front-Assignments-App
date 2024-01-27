@@ -20,7 +20,7 @@ export class AssignmentsService {
 
   ngOnInit(): void {
   }
-  url="http://localhost:8010/api/assignments";
+  url="https://assigments-backend.onrender.com/api/assignments";
   constructor( public logging:LoggingService , private http:HttpClient) { }
   getAssignments():Observable<assignment[]>{ // observale facilite les chose
     return this.http.get<assignment[]>(this.url);

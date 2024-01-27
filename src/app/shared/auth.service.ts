@@ -12,7 +12,7 @@ export class AuthService {
 
   loggedIn=false;
   admin=false;
-  url="http://localhost:8010/api/users";
+  url="https://assigments-backend.onrender.com/api/users";
   user:User;
   private HttpOptions = {
     headers: new HttpHeaders({
