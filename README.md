@@ -71,4 +71,4 @@ Pour toute question concernant ce projet, veuillez contacter :
 
 ##### Atoui Syrine - [syrine.atoui@etu.unice.fr]
 
-#### Aarour Mouna - [mouna.aarour@etu.unice.fr]
+##### Aarour Mouna - [mouna.aarour@etu.unice.fr]
