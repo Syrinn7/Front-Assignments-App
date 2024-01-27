@@ -1,0 +1,59 @@
+.mat-sidenav-container{
+  height:calc(205vh - 115vh) ;
+}
+mat-sidenav{
+  width: 200px;
+  background-color: #ffffff;
+  text-decoration: #ffffff;
+  
+}
+
+mat-sidenav-content{
+  margin: 20px;
+  
+}
+
+.composant{
+  position: relative;
+  top: 10%;
+  left: 16%;
+  width: 400px;
+  display: flex;
+  justify-content: right;
+}
+/* Personnalisation de la couleur de la barre d'outils */
+mat-toolbar.mat-toolbar {
+  background-color: #6c2832; /* Couleur rose bébé */
+  height: 70px;
+}
+.not-connected-text {
+font-size: 15px;
+}
+.home-button {
+  color: white;
+  height: 39px;
+}
+
+.assigments-button{
+  height: 150px;
+}
+/* Personnaliser le bouton de base */
+.custom-button-base {
+  background-color: #6c2832; /* Couleur rose bébé */
+  color: white; /* Couleur du texte */
+  font-size: 15px;
+}
+
+/* Personnaliser le bouton de déconnexion */
+.custom-button-logout {
+  background-color: #6a4147; /* Couleur rose bébé */
+  color: white; /* Couleur du texte */
+  font-size: 15px;
+}
+
+/* Vous pouvez ajouter des styles supplémentaires pour les états hover, focus, etc. */
+.custom-button-base:hover, .custom-button-logout:hover {
+  background-color: #9c6b73; /* Une teinte légèrement plus claire pour l'état hover */
+  font-size: 15px
+}
+

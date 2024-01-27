@@ -1,0 +1,45 @@
+<mat-toolbar  class="custom-toolbar" color="primary">
+  <mat-toolbar-row>
+    <button mat-button (click)="opened=!opened" style="font-size: 15px;"><mat-icon>menu</mat-icon> Assignments </button>
+    <h1></h1>
+   <a routerLink="/home" class="home-button"><button mat-button><mat-icon>home</mat-icon> </button></a>
+    <h1></h1>
+
+   <a *ngIf="isLoggedIn(); else nonconnecte" mat-button  >
+     Vous êtes  connecté en tant que
+     <a *ngIf="isAdmin() ; else  nonadmin ">
+       admin
+     </a>
+     <ng-template #nonadmin>
+       <a> User</a>
+     </ng-template>
+   </a>
+    <ng-template #nonconnecte>
+     <a class="not-connected-text"> Vous n'êtes pas connecté</a>&nbsp;
+    </ng-template>
+    &nbsp;
+    <button mat-flat-button color="primary"  class="custom-button-base" (click)="initialser()" >Peupler ma base </button>
+    <div class="composant">
+      <a *ngIf="isLoggedIn(); else login" mat-button class="custom-button-logout"  (click)="logout()" > <button mat-button style=""> <mat-icon>logout</mat-icon> Deconnexion </button> </a>
+      <ng-template #login>
+        <app-login></app-login>
+      </ng-template>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav [(opened)] = "opened" mode="push">
+    <mat-list>
+      <mat-list-item>   <a routerLink="/home" style="text-decoration: none;" > Home</a> </mat-list-item>
+ <!--     <mat-list-item>    <a style="text-decoration: none;" routerLink="/detail"> Liste des devoirs</a> </mat-list-item>
+      <mat-list-item>    <a style="text-decoration: none;" > Ajout d'un devoir</a> </mat-list-item>
+      <mat-list-item>    <a style="text-decoration: none;" routerLink="/Modification"> Modification d'un devoir</a> </mat-list-item>
+      <mat-list-item>    <a style="text-decoration: none;" routerLink="/suppression"> Suppression d'un devoir</a> </mat-list-item> -->
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet>
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
